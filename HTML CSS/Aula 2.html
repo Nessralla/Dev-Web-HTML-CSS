@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1 id="C1"> Seja bem vindo ao nosso site</h1>
+        <h1 > Seja bem vindo ao nosso site</h1>
 
         Continuando nossos estudos de tags, a maioria das tags deve ser aberta e depois fechada. Algumas não
         precisam ser fechadas, um exemplo é a tag <!-- <br>--> <br> que utilizamos para quebrar a linha da 
@@ -13,25 +13,26 @@
 
         As tags podem ser personalizadas com atributos
         
-        <h3 style="color: #24d1d1"> Text colorido</h3>
+        <h3 id="A2" style="color: rgba(73, 170, 35, 0.562)"> Text colorido</h3>
         
-        <!-- Hyperlinks ou links são elementos usados para criar conexões entre sites, páginas ou seções de uma 
-            página. Eles permitem que os usuários cliquem em um texto para que ele seja redirecionado para 
-            outro documento.
+        <!-- Hyperlinks ou links são elementos usados para criar conexões entre sites, 
+          páginas ou seções de uma página. Eles permitem que os usuários cliquem em 
+          um texto para que ele seja redirecionado para outro documento.
             Em HTML, a tag <a> define os links
         
             O atributo href especifica o endereço do link, que pode ser outro site. (Absoluto ou externo)
             -->
         <a href="https://google.com"> Link para visitar o google </a><br>
 
-        <!-- Além de referenciar links externos, podemos também referenciar páginas dentro do nosso site
+        <!-- Além de referenciar links externos, podemos também referenciar páginas dentro 
+          do nosso site
             Criar um outro arquivo, chamado aula2a.html (Relativo ou interno)
         -->
 
         <a href="aula2a.html"> Vamos a nossa outra página</a><br>
 
-        <!-- Além de podermos linkar outros sites e páginas, podemos também navegar dentro da nossa página
-        utilizando ID e a #. Normalmente é utilizado para criar índices -->
+        <!-- Além de podermos linkar outros sites e páginas, podemos também navegar dentro
+        da nossa página utilizando ID e a #. Normalmente é utilizado para criar índices -->
 
         <hr>
 
@@ -98,8 +99,8 @@
         <hr>
 
         
-        <a href="#C1">Voltar ao início</a> <!-- Marcamos uma tag com o ID, para retornar colocamos o mesmo
-        ID precedido do simbolo # no href da tag a-->
+        <a href="#A2">Voltar ao início</a> <!-- Marcamos uma tag com o ID, para retornar
+           colocamos o mesmo ID precedido do simbolo # no href da tag a-->
 
         <!-- É possível também inserir como links arquivos para que o usuário faça o download em seu computador
         Como imagens, músicas, arquivos executáveis, jogos programas etc. Exemplo: -->
@@ -109,7 +110,8 @@
         <a href="foto.jpg"> Baixe a foto! </a><br>
         <a href="wallpapers.zip"> Baixe nossa coleção de wallpapers</a>
 
-        <!-- Também ao invés de texto, podemos ter uma imagem clicável para fazer o download ou então ir ao link
+        <!-- Também ao invés de texto, podemos ter uma imagem clicável para fazer o download 
+          ou então ir ao link
         -->
 
         <a href="https://www.google.com">
@@ -123,14 +125,82 @@
 
             Cada célula da tabela é definida com a tag <td>.
 
-            Um cabeçalho de tabela é definido com a tag <th>. Por padrão, os títulos das tabelas estão 
+            Um cabeçalho de tabela é definido com a tag <th>. 
+            Por padrão, os títulos das tabelas estão 
             em negrito e centralizados.
 
         -->
 
         <hr>
 
+        <h2>Tabela</h2>
+
+        <table border="1" height="400px" width="100%">
+          
+          <tr>
+            <th colspan="4">Melhores Jogos</th>
+          </tr>
+
+          <tr>
+            <th>Game</th>
+            <th>Plataforma</th>
+            <th>Gênero</th>
+            <th>Preço</th>
+          </tr>
+
+          <tr>
+            <td>God of War</td>
+            <td>Playstation</td>
+            <td>Ação</td>
+            <td>R$ 150,00</td>
+          </tr>
+
+          <tr>
+            <td>Forza Horizon</td>
+            <td>Xbox</td>
+            <td>Corrida</td>
+            <td>R$ 130,00</td>
+          </tr>
+
+          <tr>
+            <td>Clash of Clans</td>
+            <td>Mobile</td>
+            <td>Estratégia</td>
+            <td>Gratuito</td>
+          </tr>
+
+          <tr>
+            <td>Counter Strike</td>
+            <td rowspan="2">PC</td>
+            <td>Tiro</td>
+            <td>R$ 30,00</td>
+          </tr>
+
+          <tr>
+            <td>Dota 2</td>
+            
+            <td>MOBA</td>
+            <td> Gratuito </td>
+          </tr>
+
+
+        </table>
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <h2>Tabela</h2>
     
