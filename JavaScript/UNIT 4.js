@@ -76,7 +76,7 @@ function adicionarItem() {
 function atualizaTabela(item){
     
     var htmlFinal = "<tr>";
-    htmlFinal += "<td>" + item.nomeItem + "</td>";
+    htmlFinal += "<td>" + item.nome + "</td>";
     htmlFinal += "<td>" + item.quantidade + "</td>";
     htmlFinal += "<td>" + item.preco + "</td>";
     htmlFinal += "</tr>";
@@ -88,8 +88,86 @@ function atualizaTabela(item){
 function fecharCompra(){
     var htmlFinal = 'Você Comprou: ';
 
+    let soma = 0;
     for (var i = 0; i <itens.length; i++){
-        htmlFinal += itens[i].quantidade + ' ' + itens[i].nomeItem + ' - ';
+        htmlFinal += itens[i].quantidade + ' ' + itens[i].nome + ' - ';
+        soma += itens[i].quantidade*itens[i].preco;
     }
+    htmlFinal += "Total: R$" + soma;
     $("#fechamentoLabelId").text(htmlFinal);
+}
+
+atores = [];
+sets = [];
+
+function Ator(nome,sobrenome,cache){
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    this.cache = cache;
+}
+
+function set(local,custo,horas){
+    this.local = local;
+    this.custo = custo;
+    this.horas = horas;
+}
+
+function inserirAtor(){
+    let novoNome = $("#nomeAtor").val();
+    let novoSobrenome = $("#sobrenomeAtor").val();
+    let novoCache = parseInt($("#cacheAtor").val());
+    var novoAtor = new Ator(novoNome,novoSobrenome,novoCache);
+    atores.push(novoAtor);
+    atualizaTabelaAtores(novoAtor);
+    console.log(atores);
+}
+
+function inserirSet(){
+    let novoLocal = $("#localSet").val();
+    let novoCusto = parseInt($("#custoLocSet").val());
+    let novoHoras = parseInt($("#horasUtiSet").val());
+    var novoSet = new set(novoLocal,novoCusto,novoHoras);
+    sets.push(novoSet);
+    atualizaTabelaSets(novoSet);
+    console.log(sets);
+}
+
+function atualizaTabelaAtores(item){
+    
+    var htmlFinal = "<tr>";
+    htmlFinal += "<td>" + item.nome + "</td>";
+    htmlFinal += "<td>" + item.sobrenome + "</td>";
+    htmlFinal += "<td>" + item.cache + "</td>";
+    htmlFinal += "</tr>";
+    $("#tabelaItensAtores").append(htmlFinal);  
+  
+}
+
+function atualizaTabelaSets(item){
+    
+    var htmlFinal = "<tr>";
+    htmlFinal += "<td>" + item.local + "</td>";
+    htmlFinal += "<td>" + item.custo + "</td>";
+    htmlFinal += "<td>" + item.horas + "</td>";
+    htmlFinal += "</tr>";
+    $("#tabelaItensSets").append(htmlFinal);  
+  
+}
+
+function calculaCustos(){
+    htmlCaches = 0;
+    htmlLocacoes = 0;
+    htmlHoras = 0;
+
+    for (i of atores){
+        htmlCaches += i.cache;
+    }
+
+    for (i of sets){
+        htmlLocacoes += i.custo;
+        htmlHoras += i.horas;
+    }
+
+    htmlCustos = "O filme custará R$: " + (htmlCaches+htmlLocacoes) + " e durará " + htmlHoras + " horas";
+    $("#resultado").text(htmlCustos);
 }

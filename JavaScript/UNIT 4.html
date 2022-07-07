@@ -25,5 +25,42 @@
     </table>
     <button onclick="fecharCompra()">Fechar Compra</button>
     <label id="fechamentoLabelId"></label>
+
+    <!-- DESAFIO: -->
+
+
+    <h4>ATOR</h4>
+    Nome: <input id="nomeAtor">
+    Sobrenome:<input id="sobrenomeAtor"><br>
+    Cache: <input id="cacheAtor"><br>
+    <button id="inserirAtor" onclick="inserirAtor()">Inserir Ator</button>
+    <h4>SET</h4> 
+    Nome do local: <input id="localSet"><br>
+    Custo da locação: <input id="custoLocSet"><br>
+    Horas Utilizadas: <input id="horasUtiSet"><br>
+    <button id="inserirSet" onclick="inserirSet()">Inserir Set</button><br>
+
+    <table id="tabelaItensAtores" border="=1">
+        <tr>
+            <th colspan="3">Atores</th>
+        </tr>
+        <tr>
+            <td id="nome">Nome</td>
+            <td id="sobrenome">Sobrenome</td>
+            <td id="cache">Cache</td>
+        </tr>
+    </table><br><br>
+    <table id="tabelaItensSets" border="=1">
+        <tr>
+            <th colspan="3">Set</th>
+        </tr>
+        <tr>
+            <td id="nomeLocal">Nome</td>
+            <td id="custoLocal">Custo</td>
+            <td id="horasLocal">Horas de gravação</td>
+        </tr>
+    </table><br><br>
+    <button id="checkout" onclick="calculaCustos()">Calcule o valor</button><br>
+    <span id="resultado"></span>
 </body>
 </html>
