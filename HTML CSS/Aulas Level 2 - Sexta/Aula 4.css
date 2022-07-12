@@ -1,0 +1,70 @@
+/*
+
+Três formas de usar o CSS:
+    Folha de estilo externa: (arquivo.css) - Precisa ser referenciado na página HTML via tag
+        <link rel="stylesheet" href="./arquivo.css"> na HEAD
+    Folha de estilo interna: Na HEAD da página HTML abre uma tag chamada <style>  </style>
+    Estilo inline: escrever o estilo dentro da tag, não recomendado.
+
+
+TIPOS DE SELETORES:
+    tag = Aplica a todas as tags de todos os arquivos HTML (exemplo = p {color: black})
+    id = usado para referenciar uma tag específica
+    class = aplica as declarações a todos os elementos que pertencem a classe.
+*/
+
+h1 {
+    color: #373fff;
+    border: 5px solid red; /* Borda com 5 pixels de largura, sólida e com a cor vermelha*/
+    background-color: rgb(22,22,22);
+}
+
+body {
+    /* background-color: tomato; */
+    background-image: url("./aasdasdto.jpg");
+    background-repeat: repeat;
+}
+
+p.dotted {
+    border-style: dotted;
+}
+
+p.dashed {
+    border-style: dashed;
+}
+
+p.solid {
+    border-style: solid;
+}
+
+p.double {
+    border-style: double;
+}
+
+p.groove {
+    border-style: groove;
+}
+
+p.ridge {
+    border-style: ridge;
+}
+
+p.inset{
+    border-style: inset;
+}
+
+p.outset{
+    border-style: outset;
+}
+
+p.none {
+    border-style: none;
+}
+
+p.hidden {
+    border-style: hidden;
+}
+
+p.mix {
+    border-style: dotted dashed solid double;
+}
